@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/bg_main">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/login_IMG_logo_shadow"
+            android:layout_width="@dimen/main_logo_size"
+            android:layout_height="@dimen/main_logo_size"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:alpha="0.4"
+            app:srcCompat="@drawable/logo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/login_IMG_logo"
+            android:layout_width="@dimen/main_logo_size"
+            android:layout_height="@dimen/main_logo_size"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/login_LINEAR_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Style.TextView.ExtraBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="ברוכים השבים הביתה!"
+            android:textSize="35sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Style.TextView.SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-15dp"
+            android:text="התחברו למשק הבית"
+            android:textSize="20sp" />
+
+        <com.sidzadaun.liquidglass.LiquidGlassView
+            android:id="@+id/login_GLASS_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            app:lg_overlayColor="@color/liquid_glass_outer_white"
+            style="@style/Style.LiquidGlass.Circular">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/login_EDIT_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:paddingEnd="@dimen/edittext_icon_padding"
+                    android:hint='דוא"ל'
+                    style="@style/Style.LiquidGlass.EditText"
+                    android:background="@color/liquid_glass_inner_30"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edittext_icon_size"
+                    android:layout_height="@dimen/edittext_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    app:srcCompat="@drawable/ic_mail"/>
+
+            </RelativeLayout>
+
+        </com.sidzadaun.liquidglass.LiquidGlassView>
+
+        <com.sidzadaun.liquidglass.LiquidGlassView
+            android:id="@+id/login_GLASS_password"
+            style="@style/Style.LiquidGlass.Circular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/login_EDIT_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:paddingEnd="@dimen/edittext_icon_padding"
+                    style="@style/Style.LiquidGlass.EditText"
+                    android:hint="סיסמה"
+                    android:background="@color/liquid_glass_inner_30"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/edittext_icon_size"
+                    android:layout_height="@dimen/edittext_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    app:srcCompat="@drawable/ic_password"/>
+
+            </RelativeLayout>
+
+        </com.sidzadaun.liquidglass.LiquidGlassView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_BTN_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/turquoise"
+            android:text="התחברות"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_bold"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_LINEAR_center"
+        android:layout_alignParentBottom="true">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_BTN_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/transparent"
+            android:text="חדשים? להרשמה"
+            android:textColor="@color/turquoise"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_semibold"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</RelativeLayout>

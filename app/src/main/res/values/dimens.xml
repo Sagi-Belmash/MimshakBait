@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_logo_size">150dp</dimen>
+    <dimen name="edittext_icon_size">25dp</dimen>
+    <dimen name="edittext_height">55dp</dimen>
+    <dimen name="edittext_icon_padding">55dp</dimen>
+</resources>

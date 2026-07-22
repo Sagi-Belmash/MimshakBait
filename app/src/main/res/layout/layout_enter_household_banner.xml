@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/enter_TEXT_lets_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        style="@style/Style.TextView.ExtraBold"
+        android:textColor="@color/black"
+        android:text="בואו נתחיל"
+        android:textSize="35sp"/>
+
+    <com.sidzadaun.liquidglass.LiquidGlassView
+        android:id="@+id/enter_GLASS_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/Style.LiquidGlass.Circular"
+        app:lg_overlayColor="@color/liquid_glass_outer_turquoise">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_BTN_join"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            style="@style/Style.LiquidGlass.Button"
+            android:backgroundTint="@color/transparent"
+            android:text="הצטרפות למשק בית קיים"
+            android:textColor="@color/black"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="25dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/ic_join_household"/>
+
+    </com.sidzadaun.liquidglass.LiquidGlassView>
+
+    <com.sidzadaun.liquidglass.LiquidGlassView
+        android:id="@+id/enter_GLASS_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        style="@style/Style.LiquidGlass.Circular"
+        app:lg_overlayColor="@color/liquid_glass_outer_turquoise">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_BTN_create"
+            android:layout_width="300dp"
+            android:layout_height="@dimen/edittext_height"
+            style="@style/Style.LiquidGlass.Button"
+            android:backgroundTint="@color/transparent"
+            android:text="יצירת משק בית חדש"
+            android:textColor="@color/black"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="25dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/ic_create_household"/>
+
+    </com.sidzadaun.liquidglass.LiquidGlassView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enter_BTN_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/transparent"
+        android:text="חזרה למסך הראשי"
+        android:textColor="@color/gray"
+        android:textSize="17sp"
+        android:fontFamily="@font/rubik_semibold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
